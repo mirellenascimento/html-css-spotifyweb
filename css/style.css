@@ -3,12 +3,23 @@
   margin: 0;
   padding: 0;
 }
+
+
 html{
   font-family: 'Rubik', sans-serif;
   font-size: 12px;
 }
 
 h3{
+  font-weight: 500;
+}
+
+h4{
+  font-size: 1.2rem;
+}
+
+h5{
+  font-size: 1rem;
   font-weight: 500;
 }
 /* .debug *{
@@ -19,47 +30,198 @@ h3{
 /* Top-Header */
 
 .header{
-  width: 100vw;
-  height: 10vh;
+  width: calc(100vw - 300px);
+  height: 80px;
   background-color: black;
   color: white;
+  position: absolute;
+  left: 300px;
 }
 
-.header img{
-  line-height: 8vh;
-  height: 6vh;
-  margin: 2vh;
+.logo{
+  line-height: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.logo-xs{
+  line-height: 30px;
+  height: 30px;
+  margin-bottom: 10px;
 }
 
 .header .button{
   display: inline-block;
-  height: 6vh;
-  line-height: 6vh;
-  width: 12vw;
+  height: 40px;
+  line-height: 40px;;
+  width: 200px;;
   float: right;
-  margin: 2vh;
+  margin: 20px;
   border-radius: 40px;
   border: 1px solid white;
   text-align: center;
 }
 
+/* Sidebar */
 
 .sidebar{
-  height: 80vh;
-  width: 20vw;
+  height: calc(100vh - 80px);
+  width: 300px;
+  background-color: black;
+  color: grey;
+  padding-left: 15px;
+  padding-top: 15px;
 }
+
+.sidebar-xs{
+  height: calc(100vh - 80px);
+  width: 50px;
+  background-color: black;
+  color: grey;
+  padding-left: 10px;
+  padding-top: 15px;
+}
+
+.sidebar .home img{
+  float: left;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.sidebar .home ul li{
+  height: 30px;
+  line-height: 30px;
+  list-style: none;
+}
+
+.sidebar .home li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.sidebar .home a{
+  text-decoration: none;
+  color: grey;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.sidebar .home ul li:first-child a{
+  color: white;
+}
+
+.sidebar .crea-playlist h3{
+  color: white;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.square-plus{
+  float: left;
+  height: 40px;
+  width: 40px;
+  line-height: 35px;
+  padding-bottom: 5px;
+  background-color: grey;
+  color: black;
+  text-align: center;
+  font-size: 3rem;
+  margin-right: 10px;
+}
+
+.sidebar .crea-playlist h4{
+  height: 40px;
+  line-height: 40px;
+  color: grey;
+}
+
+.sidebar .crea-playlist ul li{
+  height: 30px;
+  line-height: 30px;
+  list-style: none;
+  font-weight: 700;
+}
+
+.sidebar .crea-playlist ul{
+  margin-top: 15px;
+}
+
+.sidebar .crea-playlist a{
+  text-decoration: none;
+  color: grey;
+  font-size: 1.3rem;
+  font-weight: 500;
+}
+
+.installa-app{
+  height: 20px;
+  line-height: 20px;
+  margin: 10px 0;
+}
+
+.installa-app img{
+  height: 20px;
+  float: left;
+  margin-right: 10px;
+}
+
+.linebar{
+  width: 80%;
+  height: 1px;
+  background-color: grey;
+}
+
+.user{
+  background-color: grey;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  overflow: hidden;
+  float: left;
+  margin: 10px 10px 10px 0;
+}
+
+.bottom h3{
+  height: 50px;
+  line-height: 50px;
+  color: white;
+}
+
+.bottom{
+  width: 300px;
+  position: absolute;
+  bottom: 80px;
+}
+
+
+
 
 .main-window{
   position: absolute;
-  top: 10vh;
-  left: 20vw;
-  width: 80vw;
-  height: 80vh;
+  top: 80px;
+  left: 300px;
+  width: calc(100vw - 300px);
+  height: calc(100vh - 160px);
   overflow: scroll;
   overflow-x: hidden;
 }
 
 .player{
   width: 100vw;
-  height: 10vh;
+  height: 80px;
+}
+
+@media screen and (min-width: 800px) {
+  .sidebar-xs{
+    display: none;
+  }
+
+
+
+}
+
+@media screen and (max-width: 799px) {
+  .sidebar{
+    display: none;
+  }
+
 }
