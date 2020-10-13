@@ -1,0 +1,65 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html{
+  font-family: 'Rubik', sans-serif;
+  font-size: 12px;
+}
+
+h3{
+  font-weight: 500;
+}
+/* .debug *{
+  background-color: grey;
+  border: 1px solid black;
+} */
+
+/* Top-Header */
+
+.header{
+  width: 100vw;
+  height: 10vh;
+  background-color: black;
+  color: white;
+}
+
+.header img{
+  line-height: 8vh;
+  height: 6vh;
+  margin: 2vh;
+}
+
+.header .button{
+  display: inline-block;
+  height: 6vh;
+  line-height: 6vh;
+  width: 12vw;
+  float: right;
+  margin: 2vh;
+  border-radius: 40px;
+  border: 1px solid white;
+  text-align: center;
+}
+
+
+.sidebar{
+  height: 80vh;
+  width: 20vw;
+}
+
+.main-window{
+  position: absolute;
+  top: 10vh;
+  left: 20vw;
+  width: 80vw;
+  height: 80vh;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+.player{
+  width: 100vw;
+  height: 10vh;
+}
