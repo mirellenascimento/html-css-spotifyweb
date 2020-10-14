@@ -4,10 +4,19 @@
   padding: 0;
 }
 
+.debug *{
+  background-color: grey;
+  border: 1px solid black;
+  height: 80px;
+}
 
 html{
   font-family: 'Rubik', sans-serif;
   font-size: 12px;
+}
+
+body *{
+  overflow: hidden;
 }
 
 h3{
@@ -22,36 +31,30 @@ h5{
   font-size: 1rem;
   font-weight: 500;
 }
-/* .debug *{
-  background-color: grey;
-  border: 1px solid black;
-} */
 
-/* Top-Header */
+.f-c-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+
+
+/* Top-Bar */
 
 .header{
-  width: calc(100vw - 300px);
+  width: calc(100vw - 250px);
   height: 80px;
   background-color: black;
   color: white;
-  position: absolute;
-  left: 300px;
-}
-
-.logo{
-  line-height: 50px;
-  height: 50px;
-  margin-bottom: 20px;
-}
-
-.logo-xs{
-  line-height: 30px;
-  height: 30px;
-  margin-bottom: 10px;
+  position: fixed;
+  top: 0;
+  right: 0;
 }
 
 .header .button{
-  display: inline-block;
   height: 40px;
   line-height: 40px;;
   width: 200px;;
@@ -63,17 +66,20 @@ h5{
 }
 
 /* Sidebar */
-
 .sidebar{
+  position: fixed;
+  left: 0;
   height: calc(100vh - 80px);
-  width: 300px;
+  width: 250px;
   background-color: black;
   color: grey;
-  padding-left: 15px;
-  padding-top: 15px;
+  padding: 15px;
+  overflow: hidden;
 }
 
 .sidebar-xs{
+  position: fixed;
+  left: 0;
   height: calc(100vh - 80px);
   width: 50px;
   background-color: black;
@@ -82,8 +88,48 @@ h5{
   padding-top: 15px;
 }
 
+
+/* Logo */
+.logo{
+  height: 10%;
+  width: 100%;
+  min-height: 50px;
+}
+
+.logo img{
+  line-height: 50px;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.logo-xs img{
+  height: 30px;
+  margin: 10px 0 30px 0;
+}
+
+/* Home + Playlist */
+.sidebar .top{
+  height: calc(100% - 80px);
+  width: 100%;
+  min-height: 400px;
+}
+
+/* Home */
+.home{
+  height: 20%;
+  margin-top: 20px;
+  width: 100%;
+  min-height: 110px;
+}
+
 .sidebar .home img{
   float: left;
+  width: 30px;
+  margin-right: 10px;
+}
+
+.sidebar-xs .home img{
+  text-align: center;
   width: 30px;
   margin-right: 10px;
 }
@@ -94,7 +140,17 @@ h5{
   list-style: none;
 }
 
+.sidebar-xs .home ul li{
+  height: 30px;
+  line-height: 30px;
+  list-style: none;
+}
+
 .sidebar .home li:not(:last-child){
+  margin-bottom: 10px;
+}
+
+.sidebar-xs .home li:not(:last-child){
   margin-bottom: 10px;
 }
 
@@ -107,6 +163,13 @@ h5{
 
 .sidebar .home ul li:first-child a{
   color: white;
+}
+
+/* Crea Playlist */
+.crea-playlist{
+  height: 20%;
+  min-height: 120px;
+  width: 100%;
 }
 
 .sidebar .crea-playlist h3{
@@ -134,22 +197,37 @@ h5{
   color: grey;
 }
 
-.sidebar .crea-playlist ul li{
+/* Nome Playlist */
+.sidebar .nome-playlist ul li{
   height: 30px;
   line-height: 30px;
   list-style: none;
   font-weight: 700;
 }
 
-.sidebar .crea-playlist ul{
-  margin-top: 15px;
+.nome-playlist{
+  width: 100%;
+  height: 30%;
+  overflow-y: auto;
 }
 
-.sidebar .crea-playlist a{
+.sidebar .nome-playlist a{
   text-decoration: none;
   color: grey;
   font-size: 1.3rem;
   font-weight: 500;
+}
+
+/* Sidebar bottom */
+
+.sidebar .bottom{
+  height: 80px;
+}
+
+.sidebar-xs .bottom{
+  height: 80px;
+  position: absolute;
+  bottom: 0;
 }
 
 .installa-app{
@@ -164,6 +242,11 @@ h5{
   margin-right: 10px;
 }
 
+.installa-app-xs img{
+  height: 20px;
+  text-align: center;
+}
+
 .linebar{
   width: 80%;
   height: 1px;
@@ -175,7 +258,6 @@ h5{
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  overflow: hidden;
   float: left;
   margin: 10px 10px 10px 0;
 }
@@ -186,42 +268,151 @@ h5{
   color: white;
 }
 
-.bottom{
-  width: 300px;
-  position: absolute;
-  bottom: 80px;
-}
-
-
-
-
+/* Main Window */
 .main-window{
   position: absolute;
   top: 80px;
-  left: 300px;
-  width: calc(100vw - 300px);
+  left: 250px;
+  width: calc(100vw - 250px);
   height: calc(100vh - 160px);
   overflow: scroll;
   overflow-x: hidden;
+  background-color: #141922;
+  color: white;
 }
 
+/* Menu */
+.main-window .menu{
+  margin-top: 90px;
+}
+
+.main-window .menu ul li{
+  display: inline-block;
+  list-style: none;
+  height: 80px;
+  color: grey;
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding: 1rem;
+  color: grey;
+}
+
+/* Lists*/
+
+
+.list .flex-row{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-shrink: 0;
+}
+
+.list h1{
+  padding: 1.5rem;
+  font-size: 2rem;;
+}
+
+.titles > *{
+  padding: 0.3rem;
+}
+
+.titles h2{
+  display: block;
+  font-size: 1.2rem;
+}
+
+.list h4{
+  display: block;
+  font-size: 1rem;
+  color: grey;
+}
+
+.item{
+  margin: .5rem;
+}
+.cover{
+  height: 180px;
+  width: 180px;
+  position: relative;
+}
+
+.cover img{
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.list .item{
+  width: 190px;
+  height: 350px;
+  text-align: center;
+}
+
+.list h4{
+  margin-left: 1.5rem;
+}
+
+.popolari img{
+  border-radius: 50%;
+}
+
+
+/* Player*/
 .player{
+  position: fixed;
+  bottom: 0;
   width: 100vw;
   height: 80px;
 }
+
+.f-c-between{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+
+.f-c-between .left{
+  width: 20%;
+}
+.f-c-between .center{
+  width: 60%;
+}
+.f-c-between .right{
+  width: 20%;
+}
+
+
+
+
 
 @media screen and (min-width: 800px) {
   .sidebar-xs{
     display: none;
   }
-
-
-
 }
 
 @media screen and (max-width: 799px) {
+  .header{
+    width: calc(100vw - 50px);
+    left: 50px;
+  }
+
   .sidebar{
     display: none;
+  }
+
+  .installa-app img{
+    margin-left: 4px;
+
+  }
+
+  .main-window{
+    left: 50px;
+    width: calc(100vw - 50px);
   }
 
 }

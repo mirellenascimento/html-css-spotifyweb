@@ -9,34 +9,42 @@
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
   </head>
-  <body class="debug">
+  <body>
     <section class="header">
       <div class="button" role="button">
         <h3>EFETUA L'UPGRADE</h3>
       </div>
     </section>
     <section class="sidebar">
-      <img class="logo" src="img/logo.svg" alt="Logo Spotify">
-      <nav class="home">
-        <ul>
-          <li><a href="#"> <img src="img/home.svg" alt="home">Home</a></li>
-          <li><a href="#"> <img src="img/search.svg" alt="search">Cerca</a></li>
-          <li><a href="#"> <img src="img/libreria.svg" alt="libreria">La tua libreria</a></li>
-        </ul>
-      </nav>
-      <div class="crea-playlist">
-        <h3>PLAYLIST</h3>
-        <div class="square-plus"><p>+</p></div>
-        <h4>Crea playlist</h4>
-        <ul>
-          <li>Nome playlist</li>
-          <li>Nome playlist</li>
-          <li>Nome playlist</li>
-          <li>Nome playlist</li>
-          <li>Nome playlist</li>
-          <li>Nome playlist</li>
-          <li>Nome playlist</li>
-        </ul>
+      <div class="top">
+        <div class="logo">
+          <img src="img/logo.svg" alt="Logo Spotify">
+        </div>
+        <div class="home">
+          <nav>
+            <ul>
+              <li><a href="#"> <img src="img/home.svg" alt="home">Home</a></li>
+              <li><a href="#"> <img src="img/search.svg" alt="search">Cerca</a></li>
+              <li><a href="#"> <img src="img/libreria.svg" alt="libreria">La tua libreria</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div class="crea-playlist">
+          <h3>PLAYLIST</h3>
+          <div class="square-plus"><p>+</p></div>
+          <h4>Crea playlist</h4>
+        </div>
+        <div class="nome-playlist">
+          <ul>
+            <li>Nome playlist</li>
+            <li>Nome playlist</li>
+            <li>Nome playlist</li>
+            <li>Nome playlist</li>
+            <li>Nome playlist</li>
+            <li>Nome playlist</li>
+            <li>Nome playlist</li>
+          </ul>
+        </div>
       </div>
       <div class="bottom">
         <div class="installa-app">
@@ -69,9 +77,116 @@
       </div>
     </section>
     <section class="main-window">
+      <div class="menu">
+        <nav>
+          <ul class="f-c-center">
+            <li>IN EVIDENZA</li>
+            <li>PODCAST</li>
+            <li>CLASSIFICHE</li>
+            <li>GENERI E MOOD</li>
+            <li>NUOVE USCITE</li>
+            <li>SCOPRI</li>
+          </ul>
+        </nav>
 
+      </div>
+      <div class="list recent">
+        <h1>Recent Played</h1>
+        <div class="titles flex-row">
+          <div class="item flex-col">
+            <div class="cover">
+              <img src="img/metal_lifting.jpg" alt="metal lifting">
+            </div>
+            <h2>Heavy Metal</h2>
+            <h4>Subtitle</h4>
+          </div>
+          <div class="item flex-col">
+            <div class="cover">
+              <img src="img/stranger.jpeg" alt="stranger">
+            </div>
+            <h2>Stranger Things Vol.1 (A Netflix Oridinal Series Soundtrack)</h2>
+            <h4>Kyle Dixon & Michael Stein</h4>
+          </div>
+          <div class="item flex-col">
+            <div class="cover">
+              <img src="img/aquietplace.jpeg" alt="a quiet place">
+            </div>
+            <h2>A quiet place</h2>
+            <h4>Subtitle</h4>
+          </div>
+          <div class="item flex-col">
+            <div class="cover">
+              <img src="img/split.jpeg" alt="split">
+            </div>
+            <h2>Split</h2>
+            <h4>Subtitle</h4>
+          </div>
+          <div class="item flex-col">
+            <div class="cover">
+              <img src="img/cure.jpeg" alt="cure">
+            </div>
+            <h2>A cure for wellness</h2>
+            <h4>Subtitle</h4>
+          </div>
+          <div class="item flex-col">
+            <div class="cover">
+              <img src="img/sinister.jpeg" alt="sinister">
+            </div>
+            <h2>Sinister</h2>
+            <h4>Subtitle</h4>
+          </div>
+        </div>
+      </div>
+      <div class="list creato">
+        <h1>Creato per John Doe</h1>
+        <h4>Più ascolti, più accurati saranno i suggerimenti.</h4>
+        <div class="titles flex-row">
+          <div class="item flex-col">
+            <div class="cover">
+              <img src="img/radar.jpeg" alt="Radar">
+            </div>
+            <h2>Release Radar</h2>
+          </div>
+          <div class="item flex-col">
+            <div class="cover">
+              <img src="img/mixdaily.jpeg" alt="Daily Mix 1">
+            </div>
+            <h2>Daily Mix 1</h2>
+          </div>
+        </div>
+      </div>
+      <div class="list popolari">
+        <h1>Artisti più popolari</h1>
+        <h4>Più ascolti, più accurati saranno i suggerimenti.</h4>
+        <div class="titles flex-row">
+          <div class="item flex-col">
+            <div class="cover">
+              <img src="img/einaudi.jpeg" alt="Einaudi">
+            </div>
+            <h2>Einaudi</h2>
+          </div>
+          <div class="item flex-col">
+            <div class="cover">
+              <img src="img/youg.jpeg" alt="Youg">
+            </div>
+            <h2>Youg</h2>
+          </div>
+        </div>
+      </div>
     </section>
-    <section class="player">
+    <section class="player debug">
+      <div class="f-c-between">
+        <div class="left">
+
+        </div>
+        <div class="center">
+
+        </div>
+        <div class="right">
+
+        </div>
+
+      </div>
 
     </section>
 
