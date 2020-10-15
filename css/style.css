@@ -332,12 +332,24 @@ h5{
 .main-window .menu ul li{
   display: inline-block;
   list-style: none;
-  height: 80px;
+  height: 30px;
+  line-height: 30px;
   color: grey;
   font-size: 1.2rem;
   font-weight: 400;
-  padding: 1rem;
+  margin: 1rem;
+  padding-bottom: 0.5rem;
   color: grey;
+}
+
+.main-window .menu ul:first-child hr{
+  width: 40%;
+  color: lightgreen;
+  margin: auto;
+}
+
+.main-window .menu ul li:hover{
+  color: white;
 }
 
 /* Lists*/
@@ -505,6 +517,7 @@ h5{
 
 .player .center .icons [class*=fa-]:hover{
   color: white;
+  transform: scale(2.5);
 }
 
 .player .center .icons i{
