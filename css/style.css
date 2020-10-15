@@ -42,6 +42,13 @@ h5{
   flex-shrink: 0;
 }
 
+.f-c-right{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-shrink: 0;
+}
+
 /* Top-Bar */
 
 .header{
@@ -118,7 +125,7 @@ h5{
 .home{
   height: 20%;
   margin-top: 20px;
-  min-height: 110px;
+  min-height: 100px;
 }
 
 .sidebar .home img{
@@ -167,7 +174,7 @@ h5{
 /* Crea Playlist */
 .crea-playlist{
   height: 20%;
-  min-height: 120px;
+  min-height: 100px;
 }
 
 .sidebar .crea-playlist h3{
@@ -224,7 +231,8 @@ h5{
 .sidebar-xs .bottom{
   height: 80px;
   position: absolute;
-  bottom: 0;
+  bottom: 10px;
+  text-align: center;
 }
 
 .installa-app{
@@ -239,15 +247,12 @@ h5{
   margin-right: 10px;
 }
 
-.installa-app-xs img{
-  height: 20px;
-  text-align: center;
-}
 
 .linebar{
   width: 80%;
   height: 1px;
   background-color: grey;
+  margin: 0.5rem 0;
 }
 
 .user{
@@ -256,9 +261,16 @@ h5{
   width: 40px;
   border-radius: 50%;
   float: left;
-  margin: 10px 10px 10px 0;
   overflow: hidden;
+  margin-right: 1rem;
 }
+
+.sidebar-xs .user{
+  height: 30px;
+  width: 30px;
+
+}
+
 .user img{
   width: 80%;
 }
@@ -362,7 +374,7 @@ h5{
 }
 
 
-/* Player*/
+/* Player - General*/
 .player{
   position: fixed;
   bottom: 0;
@@ -370,6 +382,7 @@ h5{
   height: 80px;
   background-color: #282828;
   color: white;
+  overflow-x: auto;
 }
 
 .f-c-between{
@@ -381,30 +394,43 @@ h5{
 
 .f-c-between .left{
   margin-left: 15px;
-  width: 25%;
+  width: 20%;
   height: 80px;
-}
-.f-c-between .center{
-  width: 50%;
-  height: 80px;
-}
-.f-c-between .right{
-  width: 25%;
-  height: 80px;
+  flex-shrink: 0.5;
+  min-width: 180px;
+  margin: 0 15px;
+
 }
 
-.left img{
+.f-c-between .center{
+  width: calc(100% - 500px);
+  height: 80px;
+  flex-shrink: 1.5;
+  min-width: 240px;
+}
+
+.f-c-between .right{
+  width: 20%;
+  height: 80px;
+  flex-shrink: 0.5;
+  min-width: 180px;
+  margin: 0 15px;
+
+}
+
+/* Player - left*/
+.player .left img{
   height: 40px;
   margin-right: 0.8rem;
 }
 
-.player .icons{
+.player .left .icons{
   margin-left: 1rem;
 }
 
 .player .left .icons i{
-  padding-left: 0.5rem;
-  transform: scale(0.8);
+  padding: 0.5rem;
+  transform: scale(1.3);
   color: grey;
 }
 
@@ -417,24 +443,89 @@ h5{
   transform: scale(0.8);
 }
 
+/* Player - left*/
+.player .center{
+  align-content: center;
+}
 .player .center .icons{
-  width: 100%;
+  flex-wrap: nowrap;
 }
 
 .player .center .icons i{
-  margin: 1rem 2rem;
+  margin: 1rem 1.5rem;
   transform: scale(1.8);
 }
 
+.player .center .bar{
+  flex-wrap: nowrap;
+  width: 100%;
+}
+
 .player .center .played{
-  width: 50px;
+  width: 80px;
   height: 3px;
   border-radius: 2px;
   background-color: white;
   margin-left: 1rem;
 }
 
+.player .center .ball{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: white;
+  flex-shrink: 0;
+}
 
+.player .center .unplayed{
+  width: 420px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: grey;
+  margin-right: 1rem;
+}
+
+/* Player - right*/
+.player .right .icons{
+  margin-right: 0.5rem;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.player .right .icons i{
+  padding-right: 1rem;
+  transform: scale(1.3);
+  color: grey;
+}
+
+.player .right .min{
+  width: 10px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: white;
+}
+
+.player .right .ball{
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  flex-shrink: 0;
+}
+
+.player .right .max{
+  width: 70px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: grey;
+  margin-right: 1rem;
+}
+
+.player .right .volume-bar{
+  width: 100%;
+  flex-wrap: nowrap;
+
+}
 
 @media screen and (min-width: 800px) {
   .sidebar-xs{
