@@ -129,6 +129,10 @@ h5{
   min-height: 100px;
 }
 
+.home ul li{
+  list-style: none;
+}
+
 .sidebar .home img{
   width: 30px;
   margin-right: 10px;
